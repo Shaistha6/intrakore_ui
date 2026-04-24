@@ -77,7 +77,7 @@
           >
             <!-- Day Grid -->
             <div
-              class="relative flex text-ink-gray-8"
+              class="relative flex text-ink-blueprint-4"
               v-for="(time, i) in timeArray"
               :key="time"
               :data-time-attr="i == 0 ? '' : time"

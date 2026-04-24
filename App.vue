@@ -1,5 +1,5 @@
 <script setup>
-import { Button, Badge, Alert, TextInput, Sidebar, ListView, Avatar, Breadcrumbs, AxisChart, DonutChart, FunnelChart, NumberChart } from './src'
+import { Button, Badge, Alert, TextInput, Sidebar, ListView, Avatar, Breadcrumbs, AxisChart, DonutChart, FunnelChart, NumberChart, Calendar } from './src'
 import { ref } from 'vue'
 
 const isDark = ref(false)
@@ -126,7 +126,10 @@ const ghostValue = ref('')
       <div>
         <p style="font-size: 12px; margin-bottom: 12px; color: var(--text-ink-gray-5);">BADGES</p>
         <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-          <Badge theme="blue">Blueprint</Badge>
+          <Badge theme="blueprint" variant="subtle">Subtle</Badge>
+          <Badge theme="blueprint" variant="solid">Solid</Badge>
+          <Badge theme="blueprint" variant="outline">Outline</Badge>
+          <Badge theme="blueprint" variant="ghost">Ghost</Badge>
           <Badge theme="gray">Neutral</Badge>
           <Badge theme="red">Error</Badge>
           <Badge theme="green">Success</Badge>
@@ -148,30 +151,10 @@ const ghostValue = ref('')
       <div>
         <p style="font-size: 12px; margin-bottom: 12px; color: var(--text-ink-gray-5);">TEXT INPUT — SUBTLE</p>
         <div style="display: flex; flex-direction: column; gap: 12px; max-width: 400px;">
-          <TextInput
-            variant="subtle"
-            size="sm"
-            placeholder="Default (sm)"
-            v-model="subtleValue"
-          />
-          <TextInput
-            variant="subtle"
-            size="md"
-            placeholder="Default (md)"
-            v-model="subtleValue"
-          />
-          <TextInput
-            variant="subtle"
-            size="lg"
-            placeholder="Default (lg)"
-            v-model="subtleValue"
-          />
-          <TextInput
-            variant="subtle"
-            size="sm"
-            placeholder="Disabled"
-            :disabled="true"
-          />
+          <TextInput variant="subtle" size="sm" placeholder="Default (sm)" v-model="subtleValue" />
+          <TextInput variant="subtle" size="md" placeholder="Default (md)" v-model="subtleValue" />
+          <TextInput variant="subtle" size="lg" placeholder="Default (lg)" v-model="subtleValue" />
+          <TextInput variant="subtle" size="sm" placeholder="Disabled" :disabled="true" />
         </div>
       </div>
 
@@ -179,30 +162,10 @@ const ghostValue = ref('')
       <div>
         <p style="font-size: 12px; margin-bottom: 12px; color: var(--text-ink-gray-5);">TEXT INPUT — OUTLINE</p>
         <div style="display: flex; flex-direction: column; gap: 12px; max-width: 400px;">
-          <TextInput
-            variant="outline"
-            size="sm"
-            placeholder="Default (sm)"
-            v-model="outlineValue"
-          />
-          <TextInput
-            variant="outline"
-            size="md"
-            placeholder="Default (md)"
-            v-model="outlineValue"
-          />
-          <TextInput
-            variant="outline"
-            size="lg"
-            placeholder="Default (lg)"
-            v-model="outlineValue"
-          />
-          <TextInput
-            variant="outline"
-            size="sm"
-            placeholder="Disabled"
-            :disabled="true"
-          />
+          <TextInput variant="outline" size="sm" placeholder="Default (sm)" v-model="outlineValue" />
+          <TextInput variant="outline" size="md" placeholder="Default (md)" v-model="outlineValue" />
+          <TextInput variant="outline" size="lg" placeholder="Default (lg)" v-model="outlineValue" />
+          <TextInput variant="outline" size="sm" placeholder="Disabled" :disabled="true" />
         </div>
       </div>
 
@@ -210,12 +173,7 @@ const ghostValue = ref('')
       <div>
         <p style="font-size: 12px; margin-bottom: 12px; color: var(--text-ink-gray-5);">TEXT INPUT — PREFIX / SUFFIX</p>
         <div style="display: flex; flex-direction: column; gap: 12px; max-width: 400px;">
-          <TextInput
-            variant="subtle"
-            size="md"
-            placeholder="Search..."
-            v-model="prefixValue"
-          >
+          <TextInput variant="subtle" size="md" placeholder="Search..." v-model="prefixValue">
             <template #prefix>
               <svg style="width:16px;height:16px;" viewBox="0 0 16 16" fill="none">
                 <circle cx="7" cy="7" r="4.5" stroke="currentColor" stroke-width="1.5"/>
@@ -223,12 +181,7 @@ const ghostValue = ref('')
               </svg>
             </template>
           </TextInput>
-          <TextInput
-            variant="outline"
-            size="md"
-            placeholder="Enter email"
-            v-model="suffixValue"
-          >
+          <TextInput variant="outline" size="md" placeholder="Enter email" v-model="suffixValue">
             <template #suffix>
               <svg style="width:16px;height:16px;" viewBox="0 0 16 16" fill="none">
                 <rect x="2" y="4" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
@@ -239,29 +192,7 @@ const ghostValue = ref('')
         </div>
       </div>
 
-      <!-- Text Input — Ghost -->
-      <div>
-        <p style="font-size: 12px; margin-bottom: 12px; color: var(--text-ink-gray-5);">TEXT INPUT — GHOST</p>
-        <div style="display: flex; flex-direction: column; gap: 12px; max-width: 400px;">
-          <TextInput
-            variant="ghost"
-            size="md"
-            placeholder="Ghost — no chrome"
-            v-model="ghostValue"
-          />
-        </div>
-      </div>
-
-  <div>
-        <p style="font-size: 12px; margin-bottom: 12px; color: var(--text-ink-gray-5);">BADGES — BLUEPRINT</p>
-        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-          <Badge theme="blueprint" variant="subtle">Subtle</Badge>
-          <Badge theme="blueprint" variant="solid">Solid</Badge>
-          <Badge theme="blueprint" variant="outline">Outline</Badge>
-          <Badge theme="blueprint" variant="ghost">Ghost</Badge>
-        </div>
-      </div>
-
+      <!-- Avatar -->
       <div>
         <p style="font-size: 12px; margin-bottom: 12px; color: var(--text-ink-gray-5);">AVATAR</p>
         <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
@@ -280,92 +211,115 @@ const ghostValue = ref('')
           <Avatar size="2xl" label="Shaistha" image="https://avatars.githubusercontent.com/u/9355208" />
         </div>
       </div>
+
+      <!-- Breadcrumbs -->
       <div>
-  <p style="font-size: 12px; margin-bottom: 12px; color: var(--text-ink-gray-8);">BREADCRUMBS</p>
-  <Breadcrumbs
-    :items="[
-      { label: 'Home', route: '/' },
-      { label: 'Projects', route: '/' },
-      { label: 'Intrakore ERP' },
-    ]"
-  />
-</div>
-<!-- Number Chart -->
-<div>
-  <p style="font-size: 12px; margin-bottom: 12px; color: var(--text-ink-gray-5);">NUMBER CHART</p>
-  <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-    <NumberChart :config="{
-      title: 'Total Revenue',
-      value: 1250000,
-      prefix: 'AED',
-      delta: 12.5,
-      deltaPrefix: '+',
-      deltaSuffix: '%'
-    }" style="width: 200px; border: 1px solid var(--outline-gray-2); border-radius: 8px;" />
-    <NumberChart :config="{
-      title: 'Lost Deals',
-      value: 45000,
-      prefix: 'AED',
-      delta: -5.2,
-      deltaSuffix: '%'
-    }" style="width: 200px; border: 1px solid var(--outline-gray-2); border-radius: 8px;" />
-  </div>
-</div>
+        <p style="font-size: 12px; margin-bottom: 12px; color: var(--text-ink-gray-5);">BREADCRUMBS</p>
+        <Breadcrumbs
+          :items="[
+            { label: 'Home', route: '/' },
+            { label: 'Projects', route: '/' },
+            { label: 'Intrakore ERP' },
+          ]"
+        />
+      </div>
 
-<!-- Axis Chart -->
-<div>
-  <p style="font-size: 12px; margin-bottom: 12px; color: var(--text-ink-gray-8);">AXIS CHART</p>
-  <AxisChart :config="{
-    title: 'Monthly Revenue',
-    colors: ['#000FCE', '#705CFF', '#68C2A3'],
-    xAxis: { key: 'month', type: 'category' },
-    yAxis: { title: 'Revenue' },
-    series: [{ name: 'revenue', type: 'bar' }],
-    data: [
-      { month: 'Jan', revenue: 120000 },
-      { month: 'Feb', revenue: 180000 },
-      { month: 'Mar', revenue: 150000 },
-      { month: 'Apr', revenue: 210000 },
-      { month: 'May', revenue: 190000 },
-      { month: 'Jun', revenue: 240000 },
-    ]
-  }" style="height: 300px;" />
-</div>
+      <!-- Number Chart -->
+      <div>
+        <p style="font-size: 12px; margin-bottom: 12px; color: var(--text-ink-gray-5);">NUMBER CHART</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <NumberChart :config="{
+            title: 'Total Revenue',
+            value: 1250000,
+            prefix: 'AED',
+            delta: 12.5,
+            deltaPrefix: '+',
+            deltaSuffix: '%'
+          }" style="width: 200px; border: 1px solid var(--outline-blueprint-2); border-radius: 8px;" />
+          <NumberChart :config="{
+            title: 'Lost Deals',
+            value: 45000,
+            prefix: 'AED',
+            delta: -5.2,
+            deltaSuffix: '%'
+          }" style="width: 200px; border: 1px solid var(--outline-blueprint-2); border-radius: 8px;" />
+        </div>
+      </div>
 
-<!-- Donut Chart -->
-<div>
-  <p style="font-size: 12px; margin-bottom: 12px; color: var(--text-ink-gray-8);">DONUT CHART</p>
-  <DonutChart :config="{
-    title: 'Deal Status',
-    colors: ['#000FCE', '#705CFF', '#68C2A3', '#8D95F6'],
-    categoryColumn: 'status',
-    valueColumn: 'count',
-    data: [
-      { status: 'Won', count: 45 },
-      { status: 'Lost', count: 20 },
-      { status: 'Active', count: 30 },
-      { status: 'Pending', count: 5 },
-    ]
-  }" style="height: 300px;" />
-</div>
+      <!-- Axis Chart -->
+      <div>
+        <p style="font-size: 12px; margin-bottom: 12px; color: var(--text-ink-gray-5);">AXIS CHART</p>
+        <AxisChart :config="{
+          title: 'Monthly Revenue',
+          colors: ['#000FCE', '#705CFF', '#68C2A3'],
+          xAxis: { key: 'month', type: 'category' },
+          yAxis: { title: 'Revenue' },
+          series: [{ name: 'revenue', type: 'bar' }],
+          data: [
+            { month: 'Jan', revenue: 120000 },
+            { month: 'Feb', revenue: 180000 },
+            { month: 'Mar', revenue: 150000 },
+            { month: 'Apr', revenue: 210000 },
+            { month: 'May', revenue: 190000 },
+            { month: 'Jun', revenue: 240000 },
+          ]
+        }" style="height: 300px;" />
+      </div>
 
-<!-- Funnel Chart -->
-<div>
-  <p style="font-size: 12px; margin-bottom: 12px; color: var(--text-ink-gray-8);">FUNNEL CHART</p>
-  <FunnelChart :config="{
-    title: 'Sales Pipeline',
-    categoryColumn: 'stage',
-    valueColumn: 'count',
-    data: [
-      { stage: 'Leads', count: 100 },
-      { stage: 'Qualified', count: 75 },
-      { stage: 'Proposal', count: 50 },
-      { stage: 'Negotiation', count: 30 },
-      { stage: 'Won', count: 15 },
-    ]
-  }" style="height: 300px;" />
-</div>
+      <!-- Donut Chart -->
+      <div>
+        <p style="font-size: 12px; margin-bottom: 12px; color: var(--text-ink-gray-5);">DONUT CHART</p>
+        <DonutChart :config="{
+          title: 'Deal Status',
+          colors: ['#000FCE', '#705CFF', '#68C2A3', '#8D95F6'],
+          categoryColumn: 'status',
+          valueColumn: 'count',
+          data: [
+            { status: 'Won', count: 45 },
+            { status: 'Lost', count: 20 },
+            { status: 'Active', count: 30 },
+            { status: 'Pending', count: 5 },
+          ]
+        }" style="height: 300px;" />
+      </div>
+
+      <!-- Funnel Chart -->
+      <div>
+        <p style="font-size: 12px; margin-bottom: 12px; color: var(--text-ink-gray-5);">FUNNEL CHART</p>
+        <FunnelChart :config="{
+          title: 'Sales Pipeline',
+          categoryColumn: 'stage',
+          valueColumn: 'count',
+          data: [
+            { stage: 'Leads', count: 100 },
+            { stage: 'Qualified', count: 75 },
+            { stage: 'Proposal', count: 50 },
+            { stage: 'Negotiation', count: 30 },
+            { stage: 'Won', count: 15 },
+          ]
+        }" style="height: 300px;" />
+      </div>
+
+      <!-- Calendar -->
+      <div>
+        <p style="font-size: 12px; margin-bottom: 12px; color: var(--text-ink-gray-5);">CALENDAR</p>
+        <div style="height: 600px;">
+          <Calendar
+            :events="[
+              { id: '1', title: 'Project Kickoff', fromDate: '2026-04-23', toDate: '2026-04-23', fromTime: '09:00:00', toTime: '10:00:00', color: '#000FCE' },
+              { id: '2', title: 'Design Review', fromDate: '2026-04-24', toDate: '2026-04-24', fromTime: '14:00:00', toTime: '15:00:00', color: '#705CFF' },
+              { id: '3', title: 'Client Meeting', fromDate: '2026-04-25', toDate: '2026-04-25', fromTime: '11:00:00', toTime: '12:00:00', color: '#68C2A3' },
+            ]"
+          />
+        </div>
+      </div>
 
     </div>
   </div>
 </template>
+
+<style>
+[data-theme='dark'] {
+  --surface-white: #1A1A1A;
+}
+</style>

@@ -5,7 +5,7 @@
     v-if="new Date(date).toDateString() === new Date().toDateString()"
   >
     <Tooltip :text="dayjs().format('ddd, MMM D, YYYY h:mm a')">
-      <div class="current-time relative h-0.5 bg-[#E03636] rounded" />
+      <div class="current-time relative h-0.5 bg-surface-blueprint-5 rounded" />
     </Tooltip>
   </div>
 </template>
@@ -40,7 +40,7 @@ const setCurrentTime = computed(() => {
   width: 2px;
   height: 12px;
   border-radius: 8px;
-  background-color: #e03636;
+  background-color:var(--surface-blueprint-5);
   position: absolute;
   left: 0;
   top: -5px;

@@ -44,7 +44,7 @@
                 class="cursor-pointer"
                 :class="[
                   date.toDateString() === new Date().toDateString()
-                    ? 'flex items-center justify-center bg-surface-gray-7 text-ink-white rounded size-[25px]'
+                    ? 'flex items-center justify-center bg-surface-blueprint-5 text-ink-white rounded size-[25px]'
                     : 'bg-surface-white ',
                   isCurrentMonth(date) ? 'text-ink-gray-6' : 'text-ink-gray-4',
                 ]"
