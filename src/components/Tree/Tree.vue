@@ -38,7 +38,7 @@
   <div v-if="hasChildren && !isCollapsed" class="flex">
     <div
       :style="{ paddingLeft: linePadding }"
-      class="border-r"
+      class="border-r border-outline-blueprint-2"
       v-if="options.showIndentationGuides"
     ></div>
     <ul class="w-full" :style="{ paddingLeft: options.indentWidth }">
