@@ -1,5 +1,5 @@
 <script setup>
-import { Button, Badge, Alert, TextInput, Sidebar, ListView, Avatar, Breadcrumbs, AxisChart, DonutChart, FunnelChart, NumberChart, Calendar,Tabs } from './src'
+import { Button, Badge, Alert, TextInput, Sidebar, ListView, Avatar, Breadcrumbs, AxisChart, DonutChart, FunnelChart, NumberChart, Calendar,Tabs, Switch } from './src'
 import { ref } from 'vue'
 
 const isDark = ref(false)
@@ -323,6 +323,15 @@ const ghostValue = ref('')
       { label: 'Settings' },
     ]"
   />
+</div>
+<div>
+  <p style="font-size: 12px; margin-bottom: 12px; color: var(--text-ink-gray-5);">SWITCH</p>
+  <div style="display: flex; flex-direction: column; gap: 12px; max-width: 400px;">
+    <Switch label="Enable notifications" />
+    <Switch label="Dark mode" :modelValue="true" />
+    <Switch label="Disabled" :disabled="true" />
+    <Switch label="With description" description="This setting controls something important" />
+  </div>
 </div>
     </div>
   </div>
