@@ -28,8 +28,8 @@ import { Video } from 'lucide-vue-next'
 import { Undo2 as Undo } from 'lucide-vue-next'
 import { Redo2 as Redo } from 'lucide-vue-next'
 import { SeparatorHorizontal as Separator } from 'lucide-vue-next'
-import Table from '~icons/lucide/table-properties'
-import TableOfContentsIcon from '~icons/lucide/square-menu'
+import { TableProperties as Table } from 'lucide-vue-next'
+import { SquareMenu as TableOfContentsIcon } from 'lucide-vue-next'
 
 export default {
   Paragraph: {
