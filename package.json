@@ -12,7 +12,11 @@
     "type-check": "tsc --noEmit"
   },
   "files": [
-    "src"
+    "src",
+    "vite",
+    "icons",
+    "tailwind",
+    "frappe"
   ],
   "author": "Frappe Technologies Pvt. Ltd.",
   "license": "MIT",
