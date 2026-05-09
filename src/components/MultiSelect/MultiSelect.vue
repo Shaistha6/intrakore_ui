@@ -320,7 +320,7 @@ defineSlots<MultiSelectSlots>()
           <span
             :class="[
               'col-start-1 row-start-1 max-w-full truncate',
-              !selectedOptions.length && 'text-ink-gray-4',
+              !selectedOptions.length && 'text-ink-gray-6',
             ]"
           >
             {{ triggerSummary }}
@@ -334,7 +334,7 @@ defineSlots<MultiSelectSlots>()
 
         <span
           :class="[
-            'lucide-chevron-down size-4 shrink-0 text-ink-gray-4 transition-transform duration-200 ease-[cubic-bezier(0.23,1,0.32,1)]',
+            'lucide-chevron-down size-4 shrink-0 text-ink-gray-6 transition-transform duration-200 ease-[cubic-bezier(0.23,1,0.32,1)]',
             open && 'rotate-180',
           ]"
         />
@@ -372,12 +372,12 @@ defineSlots<MultiSelectSlots>()
               :disabled="disabled"
               :placeholder="placeholder"
               autocomplete="off"
-              class="min-w-0 flex-1 border-0 bg-transparent px-0 py-2 text-base text-ink-gray-8 outline-none placeholder:text-ink-gray-4 focus:ring-0"
+              class="min-w-0 flex-1 border-0 bg-transparent px-0 py-2 text-base text-ink-gray-8 outline-none placeholder:text-ink-gray-6 focus:ring-0"
               @input="handleInputChange"
             />
-            <LoadingIndicator
+            <LoadingIndicator 
               v-if="loading"
-              class="size-4 shrink-0 text-ink-gray-5"
+              class="size-4 shrink-0 text-ink-blueprint-3"
             />
           </div>
 

@@ -586,7 +586,7 @@ defineSlots<ComboboxSlots>()
           <div
             v-if="isButtonMode"
             data-slot="content-search"
-            class="flex items-center gap-2 border-b border-outline-blueprint-1 px-3"
+            class="flex items-center gap-2 border-b border-outline-gray-1 px-3"
           >
             <ComboboxInput
               :id="id"
@@ -596,7 +596,7 @@ defineSlots<ComboboxSlots>()
               :value="query"
               :disabled="disabled"
               :placeholder="placeholder"
-              class="min-w-0 flex-1 px-0 border-0 bg-transparent py-2 text-base text-ink-gray-8 outline-none placeholder:text-ink-gray-4 focus:ring-0"
+              class="min-w-0 flex-1 px-0 border-0 bg-transparent py-2 text-base text-ink-gray-8 outline-none placeholder:text-ink-gray-6 focus:ring-0"
               @input="handleInputChange"
               @focus="emit('focus', $event)"
               @blur="emit('blur', $event)"

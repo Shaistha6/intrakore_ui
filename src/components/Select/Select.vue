@@ -111,7 +111,7 @@ const triggerClasses = computed(() => {
   const variant = props.disabled ? 'disabled' : props.variant
   const variantClasses = {
     subtle:
-      'border border-[--surface-blueprint-2] bg-surface-blueprint-1 hover:border-outline-blueprint-1 hover:bg-surface-blueprint-2',
+      'border border-outline-blueprint-1 bg-surface-blueprint-1 hover:border-outline-blueprint-2 hover:bg-surface-blueprint-2',
     outline:
       'border border-outline-blueprint-2 bg-surface-white hover:border-outline-blueprint-3',
     ghost:
@@ -126,7 +126,7 @@ const triggerClasses = computed(() => {
   }[variant]
 
   return [
-    'relative inline-flex items-center gap-2 text-left outline-none transition-[background-color,border-color,box-shadow] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] focus-visible:ring-2 data-[state=open]:ring-2 ring-outline-gray-3 text-ink-gray-7 data-[placeholder]:text-ink-gray-4 data-[disabled]:text-ink-gray-4',
+    'relative inline-flex items-center gap-2 text-left outline-none transition-[background-color,border-color,box-shadow] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] focus-visible:ring-2 data-[state=open]:ring-2 ring-outline-blueprint-2 text-ink-gray-6 data-[placeholder]:text-ink-gray-6 data-[disabled]:text-ink-gray-4',
     triggerSizeClasses.value,
     triggerFontSizeClasses.value,
     variantClasses,
@@ -295,7 +295,7 @@ defineSlots<SelectSlots>()
         </div>
 
         <slot name="suffix">
-          <span class="lucide-chevron-down ml-auto size-4 shrink-0 text-ink-gray-4" />
+          <span class="lucide-chevron-down ml-auto size-4 shrink-0 text-ink-gray-6" />
         </slot>
       </template>
     </SelectTrigger>
@@ -327,7 +327,7 @@ defineSlots<SelectSlots>()
                 :value="internalOption.internalValue"
                 data-slot="item"
                 :class="itemRootSizeClasses"
-                class="select-none rounded border-0 text-base text-ink-gray-9 data-[disabled]:text-ink-gray-4 data-[highlighted]:bg-surface-blueprint-2 data-[state=checked]:bg-surface-blueprint-1 data-[highlighted]:data-[state=checked]:bg-surface-blueprint-2"
+                class="select-none rounded border-0 text-base text-ink-gray-9 data-[disabled]:text-ink-gray-4 data-[highlighted]:bg-surface-blueprint-1 data-[state=checked]:bg-surface-blueprint-2 data-[highlighted]:data-[state=checked]:bg-surface-blueprint-3"
               >
                 <ItemListRow
                   :size="itemSize"

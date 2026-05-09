@@ -176,16 +176,16 @@ export function triggerVariantClasses(
 
   return {
     subtle:
-      'border border-[--surface-gray-2] bg-surface-gray-2 hover:border-outline-gray-modals hover:bg-surface-gray-3',
+      'border border-outline-blueprint-1 bg-surface-blueprint-1 hover:border-outline-blueprint-2 hover:bg-surface-blueprint-2',
     outline:
-      'border border-outline-gray-2 bg-surface-white hover:border-outline-gray-3',
+      'border border-outline-blueprint-2 bg-surface-white hover:border-outline-blueprint-3',
     ghost:
-      'border border-transparent bg-transparent hover:bg-surface-gray-3 focus-within:bg-surface-gray-3',
+      'border border-transparent bg-transparent hover:bg-surface-blueprint-2 focus-within:bg-surface-blueprint-1',
   }[variant]
 }
 
 export const triggerBaseClasses =
-  'relative inline-flex items-center gap-2 text-left text-ink-gray-7 outline-none transition-[background-color,border-color,box-shadow] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] focus-visible:ring-2 data-[state=open]:ring-2 ring-outline-gray-3'
+  'relative inline-flex items-center gap-2 text-left text-ink-gray-7 outline-none transition-[background-color,border-color,box-shadow] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] focus-visible:ring-2 data-[state=open]:ring-2 ring-outline-blueprint-2'
 
 export const itemClasses =
-  'select-none rounded border-0 text-base text-ink-gray-9 transition-colors duration-100 ease-out data-[disabled]:text-ink-gray-4 data-[highlighted]:bg-surface-gray-2 data-[state=checked]:bg-surface-gray-3 data-[highlighted]:data-[state=checked]:bg-surface-gray-4'
+  'select-none rounded border-0 text-base text-ink-gray-9 transition-colors duration-100 ease-out data-[disabled]:text-ink-gray-4 data-[highlighted]:bg-surface-blueprint-1 data-[state=checked]:bg-surface-blueprint-2 data-[highlighted]:data-[state=checked]:bg-surface-blueprint-3'

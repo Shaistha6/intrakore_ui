@@ -63,7 +63,7 @@ const formatBtn = (v: string | number) =>
   viewMode.value == 'month' ? (v as String).slice(0, 3) : v
 
 const txtClass = computed(() => {
-  return model.value || props.disabled ? '': '!text-ink-gray-5' 
+  return model.value || props.disabled ? '': '!text-ink-gray-6' 
 })
 </script>
 
@@ -109,7 +109,7 @@ const txtClass = computed(() => {
           @click="() => handleOnClick(x)"
           :variant="model.includes(String(x)) ? 'solid' : 'ghost'"
           :key="x"
-          class="text-sm text-ink-gray-9"
+          class="text-sm"
           :label="String(formatBtn(x))"
           role="gridcell"
         >

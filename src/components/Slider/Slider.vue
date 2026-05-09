@@ -57,20 +57,20 @@ const trackClasses = computed(() => {
   return [
     'relative grow rounded',
     props.size === 'md' ? 'h-1.5' : 'h-1',
-    props.disabled ? 'bg-surface-gray-2' : 'bg-surface-gray-3',
+    props.disabled ? 'bg-surface-gray-2' : 'bg-surface-blueprint-2',
   ]
 })
 
 const rangeClasses = computed(() => {
   return [
     'absolute h-full rounded',
-    props.disabled ? 'bg-surface-gray-4' : 'bg-surface-gray-7',
+    props.disabled ? 'bg-surface-gray-4' : 'bg-surface-blueprint-5',
   ]
 })
 
 const thumbClasses = computed(() => {
   return [
-    'rounded-full bg-surface-white shadow-md ring-gray-600/20 transition-shadow duration-200 ease-out hover:ring-[6px] focus:outline-none dark:bg-surface-gray-7 dark:ring-gray-100/20',
+    'rounded-full bg-surface-white shadow-md ring-blueprint-600/20 transition-shadow duration-200 ease-out hover:ring-[6px] focus:outline-none dark:bg-surface-gray-5 dark:ring-gray-100/20',
     props.size === 'md' ? 'size-5' : 'size-4',
     props.disabled
       ? 'cursor-not-allowed opacity-60 hover:ring-0'

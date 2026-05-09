@@ -91,7 +91,7 @@ function getItemTextValue(item: NormalizedOption) {
     <div
       v-if="loading && hideSearch"
       data-slot="loading"
-      class="flex items-center gap-2 px-2 py-1.5 text-base text-ink-gray-5"
+      class="flex items-center gap-2 px-2 py-1.5 text-base text-ink-blueprint-3"
     >
       <LoadingIndicator class="size-4" />
       <span>Loading...</span>

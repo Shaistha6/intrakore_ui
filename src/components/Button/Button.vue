@@ -120,7 +120,7 @@ const buttonClasses = computed(() => {
     green:
       'text-ink-white bg-surface-green-3 hover:bg-green-700 active:bg-green-800',
     red: 'text-ink-white bg-surface-red-5 hover:bg-surface-red-6 active:bg-surface-red-7',
-    blueprint: 'text-ink-blueprint-1 bg-surface-blueprint-7 hover:bg-surface-blueprint-6 active:bg-surface-blueprint-5',
+    blueprint: 'text-ink-blueprint-1 bg-surface-blueprint-5 hover:bg-surface-blueprint-6 active:bg-surface-blueprint-7',
   }[props.theme]
 
   let subtleClasses = {
@@ -191,10 +191,10 @@ const buttonClasses = computed(() => {
     'red-outline':
       'bg-surface-red-2 text-ink-red-2 border border-outline-red-1',
     'red-ghost': 'text-ink-red-2',
-    'blueprint-solid': 'bg-surface-blueprint-1 text-ink-blueprint-2',
-    'blueprint-subtle': 'bg-surface-blueprint-1 text-ink-blueprint-2',
-    'blueprint-outline': 'bg-surface-blueprint-1 text-ink-blueprint-2 border border-outline-blueprint-1',
-    'blueprint-ghost': 'text-ink-blueprint-2',
+    'blueprint-solid': 'bg-surface-blueprint-1 text-ink-gray-4',
+    'blueprint-subtle': 'bg-surface-blueprint-1 text-ink-gray-4',
+    'blueprint-outline': 'bg-surface-blueprint-1 text-ink-gray-4 border border-outline-blueprint-1',
+    'blueprint-ghost': 'text-ink-gray-4',
   }
   let disabledClasses = disabledClassesMap[themeVariant]
 

@@ -109,13 +109,13 @@
                 v-for="dateObj in week"
                 type="button"
                 :key="dateObj.key"
-                class="flex h-8 w-8 items-center justify-center rounded cursor-pointer text-sm focus:outline-none focus:ring-2 focus:ring-outline-gray-2"
+                class="flex h-8 w-8 items-center justify-center rounded cursor-pointer text-sm focus:outline-none focus:ring-2 focus:ring-outline-blueprint-2"
                 :class="[
                   dateObj.inMonth ? 'text-ink-gray-8' : 'text-ink-gray-3',
-                  dateObj.isToday ? 'font-extrabold text-ink-gray-9' : '',
+                  dateObj.isToday ? 'font-extrabold text-ink-blueprint-4': '',
                   dateObj.isSelected
-                    ? 'bg-surface-gray-6 text-ink-white hover:bg-surface-gray-6'
-                    : 'hover:bg-surface-gray-2',
+                    ? 'bg-surface-blueprint-5 text-ink-white hover:bg-surface-blueprint-6'
+                    : 'hover:bg-surface-blueprint-2',
                 ]"
                 role="gridcell"
                 :aria-selected="dateObj.isSelected ? 'true' : 'false'"
@@ -139,9 +139,9 @@
               v-for="(m, i) in months"
               type="button"
               :key="m"
-              class="py-2 text-sm rounded cursor-pointer text-center hover:bg-surface-gray-2 focus:outline-none focus:ring-2 focus:ring-brand-6"
+              class="py-2 text-sm rounded cursor-pointer text-center hover:bg-surface-blueprint-2 focus:outline-none focus:ring-2 focus:ring-outline-blueprint-2"
               :class="{
-                'bg-surface-gray-6 text-ink-white hover:bg-surface-gray-6':
+                'bg-surface-blueprint-5 text-ink-white hover:bg-surface-blueprint-6':
                   i === currentMonth,
               }"
               :aria-selected="i === currentMonth ? 'true' : 'false'"
@@ -160,9 +160,9 @@
               v-for="y in yearRange"
               type="button"
               :key="y"
-              class="py-2 text-sm rounded cursor-pointer text-center hover:bg-surface-gray-2 focus:outline-none focus:ring-2 focus:ring-brand-6"
+              class="py-2 text-sm rounded cursor-pointer text-center hover:bg-surface-blueprint-2 focus:outline-none focus:ring-2 focus:ring-outline-blueprint-2"
               :class="{
-                'bg-surface-gray-6 text-ink-white hover:bg-surface-gray-6':
+                'bg-surface-blueprint-5 text-ink-white hover:bg-surface-blueprint-6':
                   y === currentYear,
               }"
               :aria-selected="y === currentYear ? 'true' : 'false'"

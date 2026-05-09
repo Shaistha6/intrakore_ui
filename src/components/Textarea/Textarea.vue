@@ -133,7 +133,7 @@ const inputClasses = computed(() => {
   let variant = props.disabled ? 'disabled' : props.variant
   let variantClasses = {
     subtle:
-      'border border-[--surface-blueprint-1] bg-surface-blueprint-1 placeholder-ink-gray-4 hover:border-outline-blueprint-2 hover:bg-surface-blueprint-3 focus:bg-surface-white focus:border-outline-blueprint-2 focus:shadow-sm focus:ring-0 focus-visible:ring-2 focus-visible:ring-outline-blueprint-2',
+      'border border-[--surface-blueprint-1] bg-surface-blueprint-1 placeholder-ink-gray-4 hover:border-outline-blueprint-2 hover:bg-surface-blueprint-2 focus:bg-surface-white focus:border-outline-blueprint-2 focus:shadow-sm focus:ring-0 focus-visible:ring-2 focus-visible:ring-outline-blueprint-2',
     outline:
       'border border-outline-blueprint-2 bg-surface-white placeholder-ink-gray-4 hover:border-outline-blueprint-3 hover:shadow-sm focus:bg-surface-white focus:border-outline-blueprint-2 focus:shadow-sm focus:ring-0 focus-visible:ring-2 focus-visible:ring-outline-blueprint-2',
     disabled: [

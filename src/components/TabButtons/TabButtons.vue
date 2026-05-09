@@ -75,7 +75,7 @@ const resolvedButtons = computed(() => {
       accessibleLabel,
       modelValue: value ?? label ?? index,
       buttonProps: {
-        theme: 'gray' as const,
+        theme: 'blueprint' as const,
         variant: 'subtle' as const,
         size: 'sm' as const,
         tooltip,
@@ -135,7 +135,7 @@ function hasLabel(label: TabButton['label']) {
 <template>
   <RadioGroupRoot v-model="selectedButtonKey" v-bind="$attrs">
     <div
-      class="inline-flex min-h-7 items-center gap-0.5 rounded-md bg-surface-gray-2 p-px ring-1 ring-inset ring-outline-gray-1"
+      class="inline-flex min-h-7 items-center gap-0.5 rounded-md bg-surface-blueprint-2 p-px ring-1 ring-inset ring-outline-blueprint-1"
     >
       <RadioGroupItem
         v-for="button in resolvedButtons"
@@ -164,7 +164,7 @@ function hasLabel(label: TabButton['label']) {
             '!h-6.5 shrink-0 !rounded-[9px] transition-[transform,background-color,color,box-shadow,border-color] duration-150 ease-out motion-safe:active:scale-[0.98] motion-reduce:transform-none motion-reduce:transition-none',
             button.hideLabel ? '!w-7 !px-0' : '',
             checked
-              ? '!border-outline-gray-1 !bg-surface-white !text-ink-gray-8 shadow-sm'
+              ? '!border-outline-blueprint-1 !bg-surface-white !text-ink-blueprint-4 shadow-sm'
               : disabled
                 ? '!bg-transparent !text-ink-gray-4'
                 : '!bg-transparent !text-ink-gray-5 hover:!bg-surface-gray-3/80 hover:!text-ink-gray-7',

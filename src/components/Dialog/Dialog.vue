@@ -240,7 +240,7 @@ const dialogPositionStyles = computed(() => {
 
 const dialogIconBgClasses = computed(() => {
   const appearance = icon.value?.appearance
-  if (!appearance) return 'bg-surface-gray-2'
+  if (!appearance) return 'bg-surface-blueprint-2'
   const classMap: Record<string, string> = {
     warning: 'bg-surface-amber-2',
     info: 'bg-surface-blue-2',

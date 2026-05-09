@@ -347,18 +347,18 @@ const selectedAndNearest = computed<{
 })
 
 function buttonClasses(opt: Option, idx: number): string {
-  if (idx === highlightIndex.value) return 'bg-surface-gray-3 text-ink-gray-8'
+  if (idx === highlightIndex.value) return 'bg-surface-blueprint-2 text-ink-gray-8'
   const { selected, nearest } = selectedAndNearest.value
   if (isTyping.value && !selected) {
     if (nearest && nearest.value === opt.value)
-      return 'text-ink-gray-7 italic bg-surface-gray-2'
-    return 'text-ink-gray-6 hover:bg-surface-gray-2 hover:text-ink-gray-8'
+      return 'text-ink-gray-7 italic bg-surface-blueprint-1'
+    return 'text-ink-gray-6 hover:bg-surface-blueprint-2 hover:text-ink-gray-8'
   }
   if (selected && selected.value === opt.value)
-    return 'bg-surface-gray-3 text-ink-gray-8'
+    return 'bg-surface-blueprint-2 text-ink-gray-8'
   if (nearest && nearest.value === opt.value)
-    return 'text-ink-gray-7 italic bg-surface-gray-2'
-  return 'text-ink-gray-6 hover:bg-surface-gray-2 hover:text-ink-gray-8'
+    return 'text-ink-gray-7 italic bg-surface-blueprint-2'
+  return 'text-ink-gray-6 hover:bg-surface-blueprint-2 hover:text-ink-gray-8'
 }
 
 watch(
